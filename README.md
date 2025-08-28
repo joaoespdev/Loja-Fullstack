@@ -1,6 +1,6 @@
 # 👟 Minha Loja - Loja de Tênis
 
-Uma loja online moderna e responsiva especializada em tênis, desenvolvida com React e TypeScript. O projeto apresenta um design minimalista e uma experiência de usuário fluida em todos os dispositivos.
+Uma loja moderna e responsiva especializada em tênis, desenvolvida com React e TypeScript. O projeto apresenta um design minimalista e uma experiência de usuário fluida em todos os dispositivos.
 
 ## 🚀 Sobre o Projeto
 
@@ -10,14 +10,14 @@ Este é um projeto front-end de e-commerce focado na venda de tênis, com layout
 
 - **Catálogo de Produtos**: Visualização de tênis com imagens, nomes e preços
 - **Carrinho de Compras**: Adicionar produtos, visualizar itens e calcular totais
-- **Design Responsivo**: Layout otimizado para desktop, tablet e mobile
+- **Design Responsivo**: Layout otimizado para desktop e mobile
 - **Interface Intuitiva**: Navegação simples entre páginas principais
 - **Agrupamento Inteligente**: Produtos iguais são agrupados automaticamente no carrinho
 
 ### 📱 Páginas
 
 1. **Home**: Página principal com catálogo de produtos
-2. **Carrinho**: Visualização e gerenciamento dos itens selecionados
+2. **Carrinho**: Visualização e valores dos itens selecionados
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -35,14 +35,6 @@ Este é um projeto front-end de e-commerce focado na venda de tênis, com layout
 ### Ferramentas de Desenvolvimento
 - **ESLint** - Linting e padronização de código
 - **TypeScript ESLint** - Regras específicas para TypeScript
-
-## 🎨 Design e Layout
-
-- **Design Minimalista**: Interface limpa e focada na experiência do usuário
-- **Layout Responsivo**: Adaptação perfeita para diferentes tamanhos de tela
-- **Flexbox & Grid**: Organização eficiente dos elementos e listas de produtos
-- **Gradientes Modernos**: Botões com gradientes atraentes
-- **Micro-interações**: Hover states e transições suaves
 
 ## 📋 Pré-requisitos
 
@@ -139,35 +131,16 @@ minha-loja/
 
 ### 🔄 Em Desenvolvimento
 - [ ] Integração com backend
-- [ ] Sistema de autenticação
-- [ ] Processamento de pagamentos
+- [ ] Banco em memória não relacional (MongoDB)
 - [ ] Gestão de estoque
-- [ ] Painel administrativo
 
-## 🎨 Responsividade
-
-O projeto foi desenvolvido com foco em responsividade, incluindo breakpoints específicos para:
-
-- **Desktop**: Layout em grid 3x2 para produtos
-- **Tablet**: Adaptação para grid 2x3
-- **Mobile**: Layout horizontal com scroll para produtos
-- **Dispositivos específicos**: iPhone 12 Pro, iPhone SE, Galaxy S8
-
-## 🤝 Contribuindo
+<!--## 🤝 Contribuindo
 
 1. Faça um fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
 3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
-
-## 📝 Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Gera build de produção
-- `npm run preview` - Visualiza o build de produção
-- `npm run test` - Executa os testes
-- `npm run lint` - Executa o linting do código
 
 ## 🔮 Próximos Passos
 
@@ -178,11 +151,8 @@ O projeto foi desenvolvido com foco em responsividade, incluindo breakpoints esp
 - **Admin Panel**: Painel para gestão de produtos e pedidos
 - **SEO Optimization**: Melhorias para otimização em motores de busca
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
+-->
+</br>
 
 **Status**: 🚧 Em desenvolvimento ativo
 
