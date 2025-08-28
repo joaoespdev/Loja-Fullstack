@@ -44,7 +44,6 @@ export default function Home({ addToCart }: HomeProps) {
     },
   ];
 
-  // Função para formatar o preço no padrão brasileiro
   const formatPrice = (price: number): string => {
     return price.toLocaleString("pt-BR", {
       style: "currency",
@@ -63,7 +62,7 @@ export default function Home({ addToCart }: HomeProps) {
             {p.name}
             <br />
             <br />
-            {formatPrice(p.price)} {/* Formatação aplicada aqui */}
+            {formatPrice(p.price)} {}
             <br />
             <br />
             <button onClick={() => addToCart(p)}>

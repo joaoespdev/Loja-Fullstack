@@ -7,7 +7,7 @@ export default function Header({ setPage, cartCount }: HeaderProps) {
   return (
     <nav>
       <div id="homeId" onClick={() => setPage("home")}>
-        <img id="logoSite" src="./public/Logo.png" />
+        <img alt="logoSite" id="logoSite" src="./public/Logo.png" />
       </div>
 
       <div id="cartId" onClick={() => setPage("cart")}>

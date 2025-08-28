@@ -18,19 +18,17 @@ nav {
   align-items: center;
 }
 
-#homeId {/*Div Logo*/
+#homeId {
   margin-top: 5%;
   margin-left: 35%;
   margin-right: 20%;
 }
 
-#cartId {/*Div Carrinho*/
+#cartId {
   display: flex;
   margin-top: 5%;
   justify-content: space-between;
 }
-
-
 
 #cartIdCelular {
   display: none;
@@ -62,8 +60,8 @@ nav button {
   list-style-type: none;
   max-width: 30%;
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr; /* 2 colunas iguais */
-  grid-template-rows: 2fr 2fr 2fr;    /* 2 linhas iguais */
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-rows: 2fr 2fr 2fr;
   grid-gap: 2% 2%;
 }
 
@@ -76,7 +74,7 @@ nav button {
   border-radius: 2%;
   padding: 5%;
   font-weight: bold;
-  min-height: 30vh;
+  min-height: 32vh;
 }
 
 #produtos li img {
@@ -94,7 +92,7 @@ nav button {
   font-weight: bold;
   border: none;
   border-radius: 0.4vh;
-  padding: 0.3vh 3vh;
+  padding: 1.3vh 3.3vh;
   font-size: 1vh;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -154,6 +152,11 @@ nav button {
 }
 
 /* ----------- CART CUSTOMIZAÇÃO Figma ----------- */
+
+#cart-qtd-preco-celular {
+  display: none;
+}
+
 .cart-box {
   background: #fff;
   color: #222;
@@ -161,7 +164,7 @@ nav button {
   padding: 2rem;
   width: 100%;
   max-width: 900px;
-  margin: 2rem auto 2rem auto; /* Centraliza horizontalmente */
+  margin: 2rem auto 2rem auto;
   box-sizing: border-box;
   min-width: 350px;
 }
@@ -315,6 +318,68 @@ nav button {
   display: none;
 }
 
+@media (max-width: 2560px) {
+  
+  #homeId {
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+  #produtos {
+    min-width: 50vw;
+    height: 60vw;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 2.00%;
+  width: 100%;
+  height: 4vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 17%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-texto {
+    margin-left: 5vh;
+  }
+
+}
+
+@media (max-width: 1920px) {
+
+  #produtos {
+    height: 75vw;
+  }
+
+}
+
+@media (max-width: 1336px) {
+
+  #homeId {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-left: 18%;
+  margin-right: 35%;
+}
+
+  #produtos {
+    height: 105vw;
+  }
+
+  #btn-texto {
+    margin-left: 7vh;
+  }
+
+}
+
 @media (max-width: 1024px) {
   #produtos {
     grid-template-columns: repeat(2, 1fr);
@@ -322,8 +387,6 @@ nav button {
     max-width: 700px;
   }
 }
-
-/* MOBILE: cards lado a lado, scroll horizontal */
 
 @media (max-width: 800px) {
   #produtosDiv {
@@ -383,66 +446,167 @@ nav button {
 
 @media (max-width: 450px) { //Iphone 14 Pro Max & Iphone XR
 
-nav {
-  display: flex;
-  align-items: center;
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  #homeId {/*Div Logo*/
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 20%;
+  }
+
+  #logoSite {
+    height: 3.3vh;
+  }
+
+  #cartIdCelular {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+
+  #cartButton {
+    display: none;
+  }
+
+  #cartLogo {
+    display: none;
+  }
+
+  #cartBtnCelular {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    background: none;
+    color:white;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5%;
+    margin-left: 15%;
+    cursor: pointer;
+  }
+
+  #cartLogoCelular {
+    width: 2vh;
+    height: 2vh;
+    margin 0;
+    padding 0;
+  }
+
+  #cartButton {
+    display: none;
+  }
+
+  #cartLogo {
+    display: none;
+  }
+
+/* ----------- CART CUSTOMIZAÇÃO Figma CELULAR ----------- */
+  
+  .cart-box {
+  padding: 1rem;
+  width: 80%;
+  margin-left: 9%;
 }
 
-#homeId {/*Div Logo*/
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 20%;
-}
-
-#logoSite {
-  height: 3.3vh;
-}
-
-#cartIdCelular {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-}
-
-#cartButton {
+#produtosCart .cart-header {
   display: none;
 }
 
-#cartLogo {
+#produtosCart li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.cart-img {
+  max-width: 9vh;
+}
+
+.cart-nome {
+  margin-bottom: 0.3rem;
+}
+
+div.cart-nome {
+    font-weight: normal;
+  }
+
+div.cart-qtd {
   display: none;
 }
 
-#cartBtnCelular {
-  font-size: 1.1rem;
+div.cart-preco {
+  display: none;
+}
+
+#cart-qtd-preco-celular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 0.5rem 2.8rem;
+    margin-top: 0.9rem;
+    width: 100%;
+    gap: 1rem;
+  }
+  #cart-qtd-celular .cart-qtd-input-celular {
+    width: 4.4vh;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background: #eaeaea;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.3rem 0;
+  }
+  #cart-preco-celular {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.cart-finalizar {
+  background: #8257e6;
+  padding: 0.8rem 4.7rem;
   font-weight: bold;
-  display: flex;
-  background: none;
-  color:white;
-  border: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 5%;
-  margin-left: 15%;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
-#cartLogoCelular {
-  width: 2vh;
-  height: 2vh;
-  margin 0;
-  padding 0;
+.cart-finalizar:hover {
+  background: #5c3ac2;
 }
 
-#cartButton {
-  display: none;
+.cart-total {
+  font-weight: bold;
+  font-size: 1.8vh;
+  color: #888;
+  text-align: right;
 }
 
-#cartLogo {
-  display: none;
+.cart-total span {
+  color: #222;
+  font-size: 2vh;
+  margin-left: 0.5rem;
+  font-weight: bold;
 }
-
 
   #produtosDiv {
     margin-top: 40%;
@@ -451,6 +615,7 @@ nav {
     padding-bottom: 1rem;
     justify-content: flex-start;
   }
+
   #produtos {
     display: flex;
     flex-direction: row;
@@ -461,6 +626,7 @@ nav {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
+
   #produtos li {
     min-width: 45vw;
     max-width: 45vw;
@@ -470,6 +636,7 @@ nav {
     scroll-snap-align: start;
     padding: 1.5rem 1rem 1rem 1rem;
   }
+
   #produtos li img {
     max-width: 100%;
   }
@@ -477,6 +644,7 @@ nav {
   #btn-texto {
     display: none;
   }
+
   #btn-texto-celular {
     display: inline;
     font-size: 2vh;
@@ -504,6 +672,7 @@ nav {
   #produtos {
     gap: 0.5rem;
   }
+  
   #produtos li {
     min-width: 95vw;
     max-width: 95vw;
@@ -547,7 +716,6 @@ nav {
   #produtos li {
     min-width: 65vw;
     max-width: 65vw;
-    padding: 1rem 0.2rem 0.5rem 0.2rem;
     height: 50vh;
   }
 
@@ -579,6 +747,14 @@ nav {
   padding: 0.3vh 3vh;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+/* ----------- CART CUSTOMIZAÇÃO Figma CELULAR ----------- */
+  
+  .cart-box {
+  padding: 1rem;
+  width: 80%;
+  margin-left: 5%;
 }}
 
 @media (max-width: 380px) { //iPhone SE
@@ -623,9 +799,11 @@ nav {
 }}
 
 @media (max-width: 360px) { //Galaxy S8
+  
   #produtos {
     gap: 0.5rem;
   }
+
   #produtos li {
     min-width: 65vw;
     max-width: 65vw;
@@ -661,6 +839,11 @@ nav {
   padding: 0.3vh 3vh;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.cart-box {
+  padding: 1rem;
+  margin-left: 1.5%;
 }}
 
 @media (max-width: 300px) {
@@ -702,3 +885,4 @@ nav {
   cursor: pointer;
   transition: background-color 0.2s;
 }}
+

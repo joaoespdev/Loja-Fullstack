@@ -4,7 +4,6 @@ interface CartProps {
   items: Product[];
 }
 
-// Agrupa produtos iguais e soma a quantidade
 function groupCartItems(items: Product[]) {
   const map = new Map<number, { product: Product; quantity: number }>();
   for (const item of items) {
@@ -65,6 +64,21 @@ export default function Cart({ items }: CartProps) {
                 </div>
                 <div className="cart-preco">
                   {formatPrice(product.price * quantity)}
+                </div>
+
+                <div id="cart-qtd-preco-celular">
+                  <div id="cart-qtd-celular">
+                    <input
+                      type="number"
+                      min={1}
+                      value={quantity}
+                      readOnly
+                      className="cart-qtd-input-celular"
+                    />
+                  </div>
+                  <div id="cart-preco-celular">
+                    {formatPrice(product.price * quantity)}
+                  </div>
                 </div>
               </li>
             ))}
