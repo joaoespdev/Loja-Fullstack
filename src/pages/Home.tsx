@@ -68,7 +68,8 @@ export default function Home({ addToCart }: HomeProps) {
             <br />
             <button onClick={() => addToCart(p)}>
               <img src="/Carrinho.png" id="iconCart" />
-              <p id="adicionarAoCarrinho">ADICIONAR AO CARRINHO</p>
+              <span id="btn-texto">ADICIONAR AO CARRINHO</span>
+              <span id="btn-texto-celular">ADICIONAR</span>
             </button>
           </li>
         ))}

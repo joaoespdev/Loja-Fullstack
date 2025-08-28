@@ -30,6 +30,12 @@ nav {
   justify-content: space-between;
 }
 
+
+
+#cartIdCelular {
+  display: none;
+}
+
 #cartButton {
   background: none;
   color:white;
@@ -106,23 +112,11 @@ nav button {
   max-width: 1.5vh;
 }
 
-#adicionarAoCarrinho {
+#btn-texto {
   display: flex;
   margin-left: 1.7vh;
   max-height: 1vh;
 }
-
-.product-1 {}
-
-.product-2 {}
-
-.product-3 {}
-
-.product-4 {}
-
-.product-5 {}
-
-.product-6 {}
 
 #produtosCartDiv {
   background: white;
@@ -158,19 +152,6 @@ nav button {
 #produtosCart li:last-child {
   border-bottom: none;
 }
-
-
-
-
-
-
-
-
-
-
-/* ...existing code... */
-
-/* ...existing code... */
 
 /* ----------- CART CUSTOMIZAÇÃO Figma ----------- */
 .cart-box {
@@ -323,3 +304,401 @@ nav button {
   margin-left: 0.5rem;
   font-weight: bold;
 }
+
+/* ----------- RESPONSIVIDADE PRODUTOS ----------- */
+
+#btn-texto {
+  display: inline;
+}
+
+#btn-texto-celular {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  #produtos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    max-width: 700px;
+  }
+}
+
+/* MOBILE: cards lado a lado, scroll horizontal */
+
+@media (max-width: 800px) {
+  #produtosDiv {
+    margin-top: 40%;
+    width: 100vw;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+  }
+  #produtos {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: max-content;
+    min-width: 100vw;
+    padding: 0 0 1rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  #produtos li {
+    min-width: 40vw;
+    max-width: 40vw;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    scroll-snap-align: start;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  #produtos li img {
+    max-width: 100%;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 15vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 10.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 17%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 450px) { //Iphone 14 Pro Max & Iphone XR
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+#homeId {/*Div Logo*/
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 20%;
+}
+
+#logoSite {
+  height: 3.3vh;
+}
+
+#cartIdCelular {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+#cartButton {
+  display: none;
+}
+
+#cartLogo {
+  display: none;
+}
+
+#cartBtnCelular {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  background: none;
+  color:white;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 5%;
+  margin-left: 15%;
+  cursor: pointer;
+}
+
+#cartLogoCelular {
+  width: 2vh;
+  height: 2vh;
+  margin 0;
+  padding 0;
+}
+
+#cartButton {
+  display: none;
+}
+
+#cartLogo {
+  display: none;
+}
+
+
+  #produtosDiv {
+    margin-top: 40%;
+    width: 100vw;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+  }
+  #produtos {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: max-content;
+    min-width: 100vw;
+    padding: 0 0 1rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  #produtos li {
+    min-width: 45vw;
+    max-width: 45vw;
+    height: 40vh;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    scroll-snap-align: start;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  #produtos li img {
+    max-width: 100%;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 2vh;
+    margin-left: 3vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 3.00%;
+  width: 100%;
+  height: 4.4vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 24%, #7854db 24%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 400px) {
+  #produtos {
+    gap: 0.5rem;
+  }
+  #produtos li {
+    min-width: 95vw;
+    max-width: 95vw;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    height: 55vh;
+  }
+  #produtos li img {
+    max-width: 98vw;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 15vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 10.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 17%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 390px) { //iPhone 12 Pro
+  #produtos {
+    gap: 0.5rem;
+  }
+  #produtos li {
+    min-width: 65vw;
+    max-width: 65vw;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    height: 50vh;
+  }
+
+  #produtos li img {
+    max-width: 64vw;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 2.5vh;
+    margin-left: 7vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 3.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 21%, #7854db 21%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 380px) { //iPhone SE
+  #produtos {
+    gap: 0.5rem;
+  }
+  #produtos li {
+    min-width: 65vw;
+    max-width: 65vw;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    height: 60vh;
+  }
+
+  #produtos li img {
+    max-width: 60vw;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 10vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 3.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 21%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 360px) { //Galaxy S8
+  #produtos {
+    gap: 0.5rem;
+  }
+  #produtos li {
+    min-width: 65vw;
+    max-width: 65vw;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    height: 55vh;
+  }
+
+  #produtos li img {
+    max-width: 60vw;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 7vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 3.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 21%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
+
+@media (max-width: 300px) {
+  #produtos {
+    gap: 0.5rem;
+  }
+  #produtos li {
+    min-width: 95vw;
+    max-width: 95vw;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    height: 65vh;
+  }
+  #produtos li img {
+    max-width: 98vw;
+  }
+
+  #btn-texto {
+    display: none;
+  }
+  #btn-texto-celular {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 15vh;
+  }
+
+  #produtos li button {
+  display: flex;
+  position:sticky;
+  margin-top: 10.00%;
+  width: 100%;
+  height: 6vh;
+
+  align-items: center;
+  background: linear-gradient(to right, #513d88 0%, #5c3ac2 17%, #7854db 17%, #7854db 100%);
+  color: white;
+  border: none;
+  border-radius: 0.4vh;
+  padding: 0.3vh 3vh;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}}
